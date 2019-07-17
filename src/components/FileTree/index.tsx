@@ -1,17 +1,23 @@
-import React, {Dispatch, SetStateAction} from "react";
-import File from "../../entities/file";
+import React from "react";
+import TreeViewDataSource from "../../entities/treeViewDataSource";
+
+import TreeView from "../TreeView/index";
 
 import "./index.css";
 
 type Props = {
-  fileFixtures:File[], 
-  updateSelectedFile:Dispatch<SetStateAction<File>>
+  dataSource: TreeViewDataSource,
+  handleFileSelected: (key: string, value: boolean) => void
 };
 
-const FileTree: React.FC<Props> = ({fileFixtures, updateSelectedFile}) => {
+const FileTree: React.FC<Props> = ({ dataSource, handleFileSelected }) => {
   return (
-    <div className="FileTree">Implement your FileTree component here.</div>
+    <div className="FileTree">
+      <TreeView dataSource={dataSource} handleFileSelected={handleFileSelected}></TreeView>
+    </div>
   );
 };
+
+
 
 export default FileTree;

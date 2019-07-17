@@ -1,0 +1,14 @@
+.TreeItem {
+    padding-left: 20px;
+}
+
+.TreeItemTitle {
+    background-color: palevioletred;
+}
+.TreeItemList {
+    background-color: slateblue;
+}
+.TreeValueList {
+    padding-left: 20px;
+    background-color: cadetblue;
+}
