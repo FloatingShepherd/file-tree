@@ -13,18 +13,18 @@ const App: React.FC<Props> = (_) => {
   const [selectedFile, updateSelectedFile] = useState(new File("", "", "", ""));
   const [treeViewDataSource, updateTreeViewDataSource] = useState(new TreeViewDataSource());
 
-
+  // Update Tree View DataSource
   const handleTreeViewDataSourceUpdate = (dataSource: TreeViewDataSource) => {
     updateTreeViewDataSource(dataSource);
   };
 
+  // Update slectedFile when user click/unclick a file
   const handleFileSelected = (key: string, value: boolean) => {
-    console.log(key);
-    console.log(value);
     const file: File = value ? parsedFiles.filter(file => file.getPath() === key)[0] : new File("", "", "", "");
     updateSelectedFile(file);
   };
 
+  // Update Tree View DataSource after component mounted.
   useEffect(() => {
     console.log("The file fixtures are here!", fileFixtures);
     const dataSource: TreeViewDataSource = new TreeViewDataSource();
