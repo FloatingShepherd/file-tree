@@ -1,0 +1,37 @@
+.App {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  text-align: left;
+}
+
+.App-header {
+  background-color: #714bbd;
+  height: 20px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  color: white;
+  font-weight: bold;
+  font-size: 20px;
+  padding: 16px;
+}
+
+@media only screen and (max-width: 800px) {
+  .App-content {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    height: 100%;
+  }
+}
+
+@media only screen and (min-width: 800px) {
+  .App-content {
+    display: flex;
+    flex-direction: row;
+    flex: 1;
+    height: 100%;
+  }
+}
+

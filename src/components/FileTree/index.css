@@ -1,0 +1,18 @@
+.FileTree {
+  display: flex;
+  background-color: #eaebeb;
+  padding: 16px;
+}
+
+
+@media only screen and (max-width: 800px) {
+  .FileTree {
+    width:100%;
+  }
+}
+
+@media only screen and (min-width: 800px) {
+  .FileTree {
+    width: 400px;
+  }
+}
