@@ -42,7 +42,7 @@ export default class File {
     }
     splitPathAndSetName() {
         const paths: string[] = this.path.split("/").filter((p) => p);
-        this.setName(paths.pop() || "");
+        this.setName(paths.slice(-1)[0] || "");
         return paths;
     }
 };

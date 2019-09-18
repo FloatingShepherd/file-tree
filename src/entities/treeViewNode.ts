@@ -24,7 +24,7 @@ export default class TreeViewNode {
     }
 
     findChild(_name: string): TreeViewNode | null {
-        const result = this.children.filter((n: TreeViewNode) => n.name === _name);
+        const result = this.children.filter((n: TreeViewNode) => n.getName() === _name);
         return result && result.length ? result[0] : null;
     }
 

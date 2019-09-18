@@ -32,6 +32,7 @@ const App: React.FC<Props> = (_) => {
       dataSource.addFileToTreeDataSource(file);
     });
     handleTreeViewDataSourceUpdate(dataSource);
+	console.log(dataSource);
   }, []);
 
   return (

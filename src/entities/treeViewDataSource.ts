@@ -17,7 +17,7 @@ export default class TreeViewDataSource {
         const paths = file.splitPathAndSetName();
         let currentNode = this.root;
 
-        // Traverse the tre based on file path. 
+        // Traverse the tree based on file path. 
         // Create nodes if such nodes do not exist.
         for (let i = 0; i < paths.length; i += 1) {
             const path = paths[i];
@@ -30,8 +30,6 @@ export default class TreeViewDataSource {
         }
 
         // Add file to the last traveled node
-        const values: string[] = currentNode.getValue() || [];
-        values.push(file.getName())
-        currentNode.setValue(values);
+        currentNode.setValue(file.getName());
     }
 }
